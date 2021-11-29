@@ -1,0 +1,93 @@
+2021-11-26 09:52:25,199 [main] ERROR com.study.boot.quicklogin.QuickLoginApplication : start application error log ok 2021-11-26T09:52:25.199
+2021-11-26 10:06:00,222 [MessageBroker-4] ERROR com.study.boot.quicklogin.QuickLoginApplication : start application error log ok 2021-11-26T10:06:00.222
+2021-11-26 10:11:42,167 [main] ERROR com.study.boot.quicklogin.QuickLoginApplication : start application error log ok 2021-11-26T10:11:42.167
+2021-11-26 10:32:25,570 [main] ERROR com.study.boot.quicklogin.QuickLoginApplication : start application error log ok 2021-11-26T10:32:25.569
+2021-11-26 11:22:44,494 [main] ERROR com.study.boot.quicklogin.QuickLoginApplication : start application error log ok 2021-11-26T11:22:44.494
+2021-11-26 13:12:04,257 [main] ERROR com.study.boot.quicklogin.QuickLoginApplication : start application error log ok 2021-11-26T13:12:04.257
+2021-11-26 13:12:05,372 [main] ERROR org.springframework.boot.SpringApplication : Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'subProtocolWebSocketHandler'; nested exception is java.lang.IllegalArgumentException: No handlers
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:170)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:586)
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.study.boot.quicklogin.QuickLoginApplication.main(QuickLoginApplication.java:82)
+Caused by: java.lang.IllegalArgumentException: No handlers
+	at org.springframework.util.Assert.isTrue(Assert.java:121)
+	at org.springframework.web.socket.messaging.SubProtocolWebSocketHandler.start(SubProtocolWebSocketHandler.java:270)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 17 more
+2021-11-26 13:13:07,741 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field messagingTemplate in com.study.boot.quicklogin.config.LogForward required a bean of type 'org.springframework.messaging.simp.SimpMessagingTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.messaging.simp.SimpMessagingTemplate' in your configuration.
+
+2021-11-26 13:40:46,010 [main] ERROR com.study.boot.quicklogin.QuickLoginApplication : start application error log ok 2021-11-26T13:40:46.010
+2021-11-26 13:46:30,227 [pool-4-thread-1] ERROR com.study.boot.quicklogin.QuickLoginApplication : start application error log ok 2021-11-26T13:46:30.227
+2021-11-26 13:48:39,769 [main] ERROR com.study.boot.quicklogin.QuickLoginApplication : start application error log ok 2021-11-26T13:48:39.769
+2021-11-26 13:48:40,052 [main] ERROR org.springframework.boot.SpringApplication : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpAnnotationMethodMessageHandler' defined in org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'messagesController' bean method 
+public java.lang.String com.study.boot.quicklogin.controller.MessagesController.send(java.lang.String)
+to {[MESSAGE],[/send]}: There is already 'messageController' bean method
+public void com.study.boot.quicklogin.config.websocket.MessageController.send(com.study.boot.quicklogin.config.websocket.MessageModel) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:583)
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.study.boot.quicklogin.QuickLoginApplication.main(QuickLoginApplication.java:76)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'messagesController' bean method 
+public java.lang.String com.study.boot.quicklogin.controller.MessagesController.send(java.lang.String)
+to {[MESSAGE],[/send]}: There is already 'messageController' bean method
+public void com.study.boot.quicklogin.config.websocket.MessageController.send(com.study.boot.quicklogin.config.websocket.MessageModel) mapped.
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.registerHandlerMethod(AbstractMethodMessageHandler.java:365)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.lambda$detectHandlerMethods$1(AbstractMethodMessageHandler.java:318)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.detectHandlerMethods(AbstractMethodMessageHandler.java:318)
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.afterPropertiesSet(AbstractMethodMessageHandler.java:267)
+	at org.springframework.web.socket.messaging.WebSocketAnnotationMethodMessageHandler.afterPropertiesSet(WebSocketAnnotationMethodMessageHandler.java:52)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 18 more
+2021-11-26 13:49:47,925 [main] ERROR com.study.boot.quicklogin.QuickLoginApplication : start application error log ok 2021-11-26T13:49:47.925
+2021-11-26 13:58:40,315 [main] ERROR com.study.boot.quicklogin.QuickLoginApplication : start application error log ok 2021-11-26T13:58:40.315
+2021-11-26 14:11:24,612 [main] ERROR com.study.boot.quicklogin.QuickLoginApplication : start application error log ok 2021-11-26T14:11:24.612
+2021-11-26 14:24:27,533 [main] ERROR com.study.boot.quicklogin.QuickLoginApplication : start application error log ok 2021-11-26T14:24:27.533

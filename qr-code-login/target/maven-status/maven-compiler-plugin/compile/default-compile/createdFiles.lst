@@ -1,0 +1,7 @@
+com\study\boot\qrlogin\controller\anonymous\TestController.class
+com\study\boot\qrlogin\right\UserRolesAndPermissions.class
+com\study\boot\qrlogin\controller\QrLoginController.class
+com\study\boot\qrlogin\config\CorsConfigure.class
+com\study\boot\qrlogin\QrCodeLoginApplication.class
+com\study\boot\qrlogin\config\QrLoginConfigure.class
+com\study\boot\qrlogin\controller\user\UserController.class
