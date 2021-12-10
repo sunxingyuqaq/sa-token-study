@@ -18,7 +18,7 @@
         <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <spring.boot.version>2.6.0</spring.boot.version>
+        <spring.boot.version>2.6.1</spring.boot.version>
         <sa-token.version>1.28.0</sa-token.version>
         <hutool.version>5.7.16</hutool.version>
         <fastjson.version>1.2.78</fastjson.version>
@@ -64,6 +64,23 @@
             <version>${fastjson.version}</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring.boot.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.github.shalousun</groupId>
+                    <artifactId>smart-doc-maven-plugin</artifactId>
+                    <version>2.3.4</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
     <modules>
         <module>quick-login</module>
