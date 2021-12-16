@@ -4,6 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.1</version>
+        <relativePath/>
+    </parent>
+
     <groupId>com.study.boot</groupId>
     <artifactId>sa-token-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -23,19 +30,8 @@
         <hutool.version>5.7.16</hutool.version>
         <fastjson.version>1.2.78</fastjson.version>
         <zxing.version>3.4.1</zxing.version>
+        <log4j2.version>2.15.0</log4j2.version>
     </properties>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-parent</artifactId>
-                <version>${spring.boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <dependencies>
         <dependency>
@@ -86,6 +82,8 @@
         <module>quick-login</module>
         <module>qr-code-login</module>
         <module>utils-common</module>
+        <module>response-spring-boot-starter</module>
+        <module>response-spring-boot-autoconfigure</module>
     </modules>
 
 </project>

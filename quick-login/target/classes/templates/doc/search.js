@@ -43,8 +43,15 @@ api[0].list[0].list.push({
     desc: '创建用户信息',
 });
 api[0].list.push({
-    alias: 'error',
+    alias: 'MessageController',
     order: '2',
+    link: 'describe:',
+    desc: 'describe:',
+    list: []
+})
+api[0].list.push({
+    alias: 'error',
+    order: '3',
     link: 'error_code_list',
     desc: '错误码列表',
     list: []
